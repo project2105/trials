@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .parent {
+            background: lightblue;
+            height: 600px;
+            width: 100%;
+            transform: skewY(5deg);
+            border-radius: 360px;
+            border: 15px solid #9999ff;
+        }
+
+        .child {
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: pink;
+            border-radius: 360px;
+            border: 15px dashed grey;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br>
+    <div class="parent">
+        <p>This is a relatively-positioned parent.</p>
+        <div class="child">
+            <p>This is an absolutely-positioned child.</p>
+        </div>
+    </div>
+    <br><br>
+    <div class="parent">
+        <p>This is another relatively-positioned parent.</p>
+        <div class="child">
+            <p>This is another absolutely-positioned child.</p>
+        </div>
+    </div>
+</body>
+
+</html>

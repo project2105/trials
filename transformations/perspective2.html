@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Perspective Ring</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        [type=range] {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .carousel {
+            -webkit-perspective-origin: 50% -300px;
+            perspective-origin: 50% -300px;
+            position: relative;
+            margin: 0 auto;
+            perspective: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 500px;
+            margin: auto;
+        }
+
+        .p3d {
+            transform-style: preserve-3d;
+        }
+
+        .perp {
+            color: #212121;
+            font: 200 15vw / 1.2 sans-serif;
+            position: absolute;
+            pointer-events: none;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            top: -50px;
+            left: 0;
+        }
+
+        .perp:first-child {
+            -webkit-transform: rotateY(60deg) translateZ(190.98593px);
+            -ms-transform: rotateY(60deg) translateZ(190.98593px);
+            transform: rotateY(60deg) translateZ(190.98593px);
+            background: rgba(63, 81, 181, 0.8);
+        }
+
+        .perp:nth-child(2) {
+            -webkit-transform: rotateY(360deg) translateZ(190.98593px);
+            -ms-transform: rotateY(360deg) translateZ(190.98593px);
+            transform: rotateY(360deg) translateZ(190.98593px);
+            background: rgba(0, 188, 212, 0.8);
+        }
+
+        .perp:nth-child(3) {
+            -webkit-transform: rotateY(300deg) translateZ(190.98593px);
+            -ms-transform: rotateY(300deg) translateZ(190.98593px);
+            transform: rotateY(300deg) translateZ(190.98593px);
+            background: rgba(255, 235, 59, 0.8);
+        }
+
+        .perp:nth-child(4) {
+            -webkit-transform: rotateY(240deg) translateZ(190.98593px);
+            -ms-transform: rotateY(240deg) translateZ(190.98593px);
+            transform: rotateY(240deg) translateZ(190.98593px);
+            background: rgba(244, 67, 54, 0.8);
+        }
+
+        .perp:nth-child(5) {
+            -webkit-transform: rotateY(180deg) translateZ(190.98593px);
+            -ms-transform: rotateY(180deg) translateZ(190.98593px);
+            transform: rotateY(180deg) translateZ(190.98593px);
+            background: rgba(233, 30, 99, 0.8);
+        }
+
+        .perp:nth-child(6) {
+            -webkit-transform: rotateY(120deg) translateZ(190.98593px);
+            -ms-transform: rotateY(120deg) translateZ(190.98593px);
+            transform: rotateY(120deg) translateZ(190.98593px);
+            background: rgba(139, 195, 74, 0.8);
+        }
+
+        [type=reset] {
+            margin: 0 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Perspective Ring</h1>
+    </header>
+
+    <main class="content">
+        <div id="perspective" class="carousel">
+            <div class="wrapper p3d">
+                <figure class="perp">a</figure>
+                <figure class="perp">b</figure>
+                <figure class="perp">c</figure>
+                <figure class="perp">d</figure>
+                <figure class="perp">e</figure>
+                <figure class="perp">f</figure>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

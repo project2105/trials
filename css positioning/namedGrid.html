@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Named Grids</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: 4fr 1fr;
+            grid-template-areas: "pagehead pagehead"
+                "mains navigation"
+                "pagefoot pagefoot";
+            column-gap: 1rem;
+            row-gap: 1rem;
+        }
+
+        header {
+            grid-area: pagehead;
+            background-color: yellow;
+            padding: 100px;
+        }
+
+        article {
+            grid-area: mains;
+            background-color: green;
+            padding: 100px;
+        }
+
+        nav {
+            grid-area: navigation;
+            background-color: purple;
+            padding: 100px;
+        }
+
+        footer {
+            grid-area: pagefoot;
+            background-color: orange;
+            padding: 100px;
+        }
+
+        p {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>pagehead</p>
+    </header>
+    <article>
+        <p>mains</p>
+    </article>
+    <nav>
+        <p>navigation</p>
+    </nav>
+    <footer>
+        <p>pagefoot</p>
+    </footer>
+</body>
+
+</html>

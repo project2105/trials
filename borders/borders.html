@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-wclassth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Background Clip</title>
+</head>
+<style>
+    .outer {
+        border: 1px solid #000;
+        float: left;
+        margin: 10px;
+    }
+
+    .inner {
+        position: relative;
+        font-family: 'courier new', monospace;
+        font-size: 12px;
+        border: 1px solid #000;
+        width: 100%;
+        height: 100%;
+    }
+
+    .box {
+        background: url('box.png');
+        background-position: top left;
+        background-repeat: no-repeat;
+        font-weight: bold;
+        border: 20px dashed #00f;
+        padding: 20px;
+        background-color: #0cc;
+        width: 140px;
+        height: 140px;
+    }
+
+    .info {
+        position: absolute;
+        bottom: 0;
+        padding: 5px;
+    }
+
+    .obb {
+        background-origin: border-box;
+    }
+
+    .opb {
+        background-origin: padding-box;
+    }
+
+    .ocb {
+        background-origin: content-box;
+    }
+
+    .cbb {
+        background-clip: border-box;
+    }
+
+    .cpb {
+        background-clip: padding-box;
+    }
+
+    .ccb {
+        background-clip: content-box;
+    }
+
+    .border {
+        font-family: 'Times New Roman';
+        font-style: italic;
+        font-size: 175%;
+        text-align: center;
+        width: 800px;
+        height: 600px;
+        display: table-cell;
+        vertical-align: middle;
+        border-image-source: url('border.png');
+        border-image-width: 130px 208px;
+        border-image-slice: 49.99%;
+    }
+</style>
+
+<body>
+    <div class="outer">
+        <div class="box obb cbb">
+            <div class="inner">
+                <span class="info">clip:border-box<br>origin:border-box</span>
+            </div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="box opb cbb">
+            <div class="inner">
+                <span class="info">clip:border-box<br>origin:padding-box</span>
+            </div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="box ocb cbb">
+            <div class="inner">
+                <span class="info">clip:border-box<br>origin:content-box</span>
+            </div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="box obb cpb">
+            <div class="inner">
+                <span class="info">clip:padding-box<br>origin:border-box</span>
+            </div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="box opb cpb">
+            <div class="inner">
+                <span class="info">clip:padding-box<br>origin:padding-box</span>
+            </div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="box ocb cpb">
+            <div class="inner">
+                <span class="info">clip:padding-box<br>origin:content-box</span>
+            </div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="box obb ccb">
+            <div class="inner">
+                <span class="info">clip:content-box<br>origin:border-box</span>
+            </div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="box opb ccb">
+            <div class="inner">
+                <span class="info">clip:content-box<br>origin:padding-box</span>
+            </div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="box ocb ccb">
+            <div class="inner">
+                <span class="info">clip:content-box<br>origin:content-box</span>
+            </div>
+        </div>
+    </div>
+    <div class="border">
+        <h1>Tea Room</h1>
+        <h2>Open Daily</h2>
+        <h3>9am to 5pm</h3>
+    </div>
+</body>
+
+</html>

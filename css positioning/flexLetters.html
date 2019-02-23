@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox Letters</title>
+    <style>
+        .flex-aligned {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-aligned li {
+            flex: 1 0 25%;
+        }
+
+        li {
+            background-color: gray;
+            padding: 2em;
+            margin: .5em;
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="flex-aligned">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+        <li>F</li>
+        <li>G</li>
+    </ul>
+</body>
+
+</html>
